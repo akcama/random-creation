@@ -3,9 +3,9 @@ Random Creation — Development Lifecycle
 Authoritative for HOW THIS PROJECT IS WORKED AND SHIPPED: what
 is stored where and why, how a session becomes a commit, how a commit becomes a release,
 and where git, GitHub and Visual Studio fit. It is not authoritative for the app's design
-(that is RandomCreation_ProjectContext_v3_0.md), for code-level engineering knowledge (that
-is RandomCreation_EngineeringNotes.md), or for AI PM's own procedure (that is
-Documents\AI PM\). Written at the v3.2 close-out, from a teaching session held at the
+(that is docs/design/2026-06-06-project-context-v3.0.md), for code-level engineering knowledge (that
+is docs/reference/engineering-notes.md), or for AI PM's own procedure (the method,
+served from the shelf clone since AI PM 5). Written at the v3.2 close-out, from a teaching session held at the
 developer's request — they wanted to learn the scheme rather than be handed one, so this
 doc carries the reasoning and not only the conclusions.
 
@@ -51,17 +51,7 @@ zip contains no source at all. Verified at the v3.2 close-out.
 2. WHERE THINGS LIVE
 --------------------------------------------------------------------------------
 
-| Path | Holds | Tracked |
-|------|-------|---------|
-| Source\RandomCreation\ | The only live source. Solution + project | Yes |
-| Source\...\SampleData\ | Sample content shipped with releases | Yes |
-| Documents\Design\ | Design records, screenshots, icons | Yes |
-| Documents\Archive\ | Pre-git v1.0/v2.0 source snapshots | Yes |
-| Documents\AI PM\ | The method; Config\ is this project's state | Yes |
-| Documents\ (root) | Handoff, backlog, changelog | Yes |
-| .github\workflows\ | Build automation (not yet created) | Yes |
-| Releases\ | Local release archive, ~780 MB | No — ignored |
-| bin\, obj\, .vs\ | Build output and IDE scratch | No — ignored |
+The rows themselves live in docs/index.md, the project's only where-is map (AI PM 5, 2026-09-12); this section keeps the reasoning, the index keeps the paths.
 
 --------------------------------------------------------------------------------
 3. THE CYCLE

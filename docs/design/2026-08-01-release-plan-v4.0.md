@@ -1,9 +1,9 @@
 Random Creation — Release Plan v4.0
 
 Authoritative for WHAT v4.0 CONTAINS, IN WHAT ORDER, AND WHY.
-Not authoritative for the app's existing design (RandomCreation_ProjectContext_v3_0.md), for
-code-level engineering knowledge (RandomCreation_EngineeringNotes.md), or for how the project
-is worked and shipped (RandomCreation_DevelopmentLifecycle.md) — the packaging decisions this
+Not authoritative for the app's existing design (docs/design/2026-06-06-project-context-v3.0.md), for
+code-level engineering knowledge (docs/reference/engineering-notes.md), or for how the project
+is worked and shipped (docs/guides/development-lifecycle.md) — the packaging decisions this
 release acts on live in that doc's sections 6 and 7, not here. Written at the v3.3 close-out
 from a full planning session: every item below was walked through with the developer, and the
 fix approach is recorded alongside the problem so the build sessions have no thinking to redo.
@@ -204,7 +204,7 @@ is one person besides themselves.
 
 Installer, uninstaller, the %LocalAppData% move and the GitHub Actions build are part of this
 release but are NOT items on the list above — they are the subject of
-RandomCreation_DevelopmentLifecycle.md sections 3, 4 and 6, which carry the decisions and the
+docs/guides/development-lifecycle.md sections 3, 4 and 6, which carry the decisions and the
 reasoning. Summarised here only so the plan reads whole:
 
   * per-user install (no admin, no UAC — which matters more than usual for an unsigned app)
@@ -259,5 +259,5 @@ CHANGE 4's button makes this a drag between two Explorer windows.
 
 * DIMMED-ITEM OPACITY — start at 60%, settled by looking at a real proof print.
 * SAMPLE CONTENT — CHANGE 6's spec is agreed; the actual content is written and then judged.
-* RandomCreation_EngineeringNotes.md carries a MIGRATION PATHS section that is accurate today and
+* docs/reference/engineering-notes.md carries a MIGRATION PATHS section that is accurate today and
   goes stale the moment BUG 2 lands. Update it in the same session, not later.

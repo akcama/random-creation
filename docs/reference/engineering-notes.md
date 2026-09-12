@@ -2,7 +2,7 @@
 
 **Authoritative for CODE-LEVEL ENGINEERING KNOWLEDGE**: the traps,
 the patterns, and the reasons behind implementation choices that reading the code does not
-reveal. Distinct in kind from `RandomCreation_ProjectContext_v3_0.md`, which is the design
+reveal. Distinct in kind from `docs/design/2026-06-06-project-context-v3.0.md`, which is the design
 record — screens, layouts, colour palettes, data models, what the app *is*. This doc is what was
 learned building it.
 
@@ -11,7 +11,7 @@ from the design record's by a single underscore and read as a duplicate of it; a
 confirmed the opposite — none of the material below appears in that document. Two sections were
 cut at the same time: a Claude-project-knowledge file-naming scheme that no longer applies, and
 an output-file-locations section that stated `categories.json` belongs in the `data\` folder,
-which contradicts the ruling recorded in `RandomCreation_DevelopmentLifecycle.md` section 7 and
+which contradicts the ruling recorded in `docs/guides/development-lifecycle.md` section 7 and
 describes the exact mistake that would destroy a user's content.
 
 ---
@@ -141,7 +141,7 @@ is broken up.
 
 **None of these are in v4.0.** This list was written in the v3.0 era under the heading
 "v4.0 Todo List", when "v4.0" meant "some future major version." The actual v4.0 —
-see `RandomCreation_ReleasePlan_v4_0.md` — contains none of it. Retitled at the v3.3
+see `docs/design/2026-08-01-release-plan-v4.0.md` — contains none of it. Retitled at the v3.3
 close-out so it cannot be read as a promise the release failed to keep.
 
 - **Refactor ManageContentScreen** into proper ViewModels — split selection

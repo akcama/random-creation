@@ -3,13 +3,6 @@ Random Creation — WPF desktop app (C# / .NET 8)
 **App:** Random Creation (Windows desktop) · **Current version:** 4.0, released August 2026
 **Original working title:** Creature Crafter (v1.0), renamed in v2.0.
 
-v4.0 shipped on 2026-08-02 via the tag-driven release pipeline: all twelve planned items, an
-installer, an uninstaller, and the move of user data out of the program folder. Downloads live at
-`https://github.com/akcama/random-creation/releases` (installer + portable zip).
-`Documents\Design\RandomCreation_ReleasePlan_v4_0.md` remains authoritative for what v4.0
-contains and why until its content is absorbed into a v4.0 record doc, at which point it
-retires.
-
 Random Creation generates random combinations from user-defined content. The user
 creates **Collections** (Creatures, Starships, Guns), adds **Category Groups** to each
 (HEAD, BODY, LIMBS), adds **Categories** to each group (Head Style, Head Count), and adds
@@ -23,64 +16,47 @@ Personal creative tool, not a commercial product. Currently in personal use and
 small-pool testing.
 
 --- AI PM — keep this block intact ---
-This project runs on AI Project Manager (AI PM).
-All paths below are relative to this project's folder.
-Session start: read Documents\AI PM\AI_PM_Instructions.md in full and
-follow it.
-Close-out (/closeout, /closeout-auto — these commands only): read
-Documents\AI PM\Closeout_Procedure.md in full and follow it.
+This project runs AI PM. The session-start hook delivers the method at
+every session start; if this session opened without an AI PM opener,
+type /ai-pm-setup. The project's memory is docs/; its map is docs/index.md.
 --- end AI PM block ---
 
----
+Where everything lives, what each record document is authoritative for, and its state:
+`docs/index.md`. The facts about the toolchain, GitHub and the pipeline: `docs/environment.md`.
 
 ## ⚠️ Where the live code is
 
-**Only one copy of the source is real.**
-
-| Path | What it is | Edit it? |
-|------|-----------|----------|
-| `Source\RandomCreation\` | **The live Visual Studio solution.** `RandomCreation.sln` + the `RandomCreation\` project. | **YES — this is the only place to make changes.** |
-| `Documents\Design\` | Design records, screenshots by version, icon assets. | Read for context |
-| `Documents\Archive\` | Pre-git source snapshots at v1.0/v2.0 — the ONLY surviving copies, since git history starts at v3.0. Reference only. | Read for context |
-| `Releases\` | Built releases (v1.0 source + build, v2.0/v3.0 zips). Git-ignored. | No |
-
-Before editing any file, confirm the path starts with `Source\RandomCreation\`. If a
-search turns up several copies of `ManageContentScreen.xaml.cs`, the one to change is
+**Only one copy of the source is real:** the Visual Studio solution under
+`Source\RandomCreation\`. Before editing any file, confirm the path starts there. If a
+search turns up several copies of `ManageContentScreen.xaml.cs` (the pre-git snapshots under
+`docs\archive\` hold older ones), the one to change is
 `Source\RandomCreation\RandomCreation\ManageContentScreen.xaml.cs`.
-
----
 
 ## Version control
 
-Git arrived with the AI PM adoption (July 2026) and the developer is **new to git and
-GitHub — explain git operations plainly as they happen**, in plain language, at the time
-they run. `.gitignore` excludes build output (`bin\`, `obj\`, `.vs\`), the `Releases\`
-archive, `Thumbs.db`, and `*.csproj.user`; those stay on disk but out of the repository.
-Everything else — live source and `Documents\` — is tracked.
+The developer is **new to git and GitHub — explain git operations plainly as they happen**,
+in plain language, at the time they run. Build output, the `Releases\` archive and the
+machine-local file are git-ignored; everything else, live source and `docs\`, is tracked.
 
-**GitHub** (set up August 2026, moved to the `akcama` organization 2026-08-03):
-`https://github.com/akcama/random-creation`, remote name `origin`. GitHub redirects the
-old `henry-akcama/random-creation` address automatically. **Public, but not open source** — the root `LICENSE` is all-rights-reserved,
+The repository is **public, but not open source**: the root `LICENSE` is all-rights-reserved
 and `README.md` declines code contributions, which is what keeps a future sale possible.
-Commits use the noreply identity `311688069+henry-akcama@users.noreply.github.com`, set
-globally on this machine so the real address never reaches a public repo. Push early and
-often: a push is backup, not publication. See the lifecycle doc for the full scheme.
+Commits use a GitHub noreply identity so the real address never reaches the public repo.
+Push early and often: a push is backup, not publication. The full scheme is in the
+development lifecycle guide.
 
 **Deletions must be loudly flagged in advance or handed to the developer** — never
 deleted quietly. Tracked files are recoverable from git history after deletion; ignored
 and untracked files (anything under `Releases\`, or any `bin\`/`obj\` folder) have no
 safety net at all, so those need an explicit ruling every time.
 
----
-
 ## Tech stack and build
 
 - **C# / WPF**, targeting **.NET 8.0 (Windows)**
 - **No NuGet packages.** Serialization is `System.Text.Json`, built into .NET 8. Keep it
   that way — do not add dependencies without asking.
-- Single solution, single project. Visual Studio Community 2022 is installed; the .NET
-  SDK it ships (9.0.316) builds this project from the command line in about seven
-  seconds, so Visual Studio does not need to be open to build or run.
+- Single solution, single project. The .NET SDK installed with Visual Studio builds this
+  project from the command line in about seven seconds, so Visual Studio does not need to
+  be open to build or run.
 - Assembly version lives in `RandomCreation.csproj` (`AssemblyVersion` / `FileVersion`),
   currently `4.0.0.0`. The Settings About section reads it from the assembly at runtime —
   never hard-code a version string in the UI. At release the pipeline overrides it from the
@@ -92,15 +68,12 @@ dotnet build
 dotnet run --project RandomCreation
 ```
 
-Releases are built by GitHub Actions (`.github\workflows\release.yml`): pushing a tag like
-`v4.0` publishes a self-contained single-file win-x64 build as both a portable zip (~70 MB)
-and an Inno Setup installer (`Source\RandomCreation\Installer\RandomCreation.iss`), attached
-to a GitHub Release. The Actions "Run workflow" button is a dry run — builds everything,
-publishes nothing. The old local publish profile
+Releases are built by GitHub Actions: pushing a tag like `v4.0` publishes a self-contained
+single-file win-x64 build as both a portable zip (~70 MB) and an Inno Setup installer,
+attached to a GitHub Release. The Actions "Run workflow" button is a dry run — builds
+everything, publishes nothing. The old local publish profile
 (`RandomCreation\Properties\PublishProfiles\FolderProfile.pubxml`) still exists but points
 at a dead output path; the pipeline is the release mechanism.
-
----
 
 ## Architecture
 
@@ -138,8 +111,6 @@ not write code that would make adding child groups a rewrite.
 **Generation rule.** A category is rolled only if its collection, its group, *and* itself
 are all enabled. Weighted random selection over the enabled options.
 
----
-
 ## Conventions that matter
 
 - **Theming: always `DynamicResource`, never `StaticResource`,** for any brush that differs
@@ -168,8 +139,6 @@ are all enabled. Weighted random selection over the enabled options.
 - **`ManageContentScreen.xaml.cs` is ~2,400 lines** and the most complex file in the
   project. Read the relevant region before editing; it has a right-panel state machine
   (Default / GroupDetail / Options) and several parallel selection HashSets.
-
----
 
 ## Data files
 
@@ -210,30 +179,16 @@ only Creature enabled, so it never reads as a monster generator.
 settings — stored, never derived from history, never reset (paper outlives the app's
 history). Shown everywhere a result appears, including the print footer.
 
----
-
 ## Working agreements
 
 - **Update `changelog.txt` in the same change** that adds a user-visible feature or fix.
   Newest version at top. It is the About section's content, so write it for a user.
-- **Keep the docs in step.** `Documents\Design\` holds the project context document and
-  file index. If a change alters architecture, data shape, or a screen's layout, say so
-  rather than letting the records silently drift.
+- **Keep the docs in step.** The record documents under `docs\` (listed in the index) hold
+  the architecture, the file index and the engineering notes. If a change alters
+  architecture, data shape, or a screen's layout, say so rather than letting the records
+  silently drift.
 - Ask before adding a NuGet package, introducing MVVM, or changing the JSON shape of
   `categories.json` — the last one is user-editable by design.
 - The `← Back` button styling, an A–Z sort button, `categories.json` import, and
   keyboard-shortcut customisation are **deliberately deferred**, not oversights. See the
-  Deferred section of the context doc before "fixing" them.
-
-## Doc map
-
-| Doc | Read it for |
-|-----|-------------|
-| `Documents\Design\RandomCreation_ReleasePlan_v4_0.md` | What v4.0 contains and why — **shipped 2026-08-02**; retires once absorbed into a v4.0 record doc |
-| `Documents\Design\RandomCreation_ProjectContext_v3_0.md` | **The deep one.** Full v3.0 architecture, every screen's layout, undo/toast/clipboard/drag specs, colour palettes, bug-fix table, deferred list |
-| `Documents\Design\RandomCreation_FileIndex_v3_0.md` | What each source file does and what changed in v3.0 |
-| `Documents\Design\RandomCreation_EngineeringNotes.md` | Code-level traps and reasons: WPF DataTrigger gotchas, why `SelectedCategoryBrush` lives in `App.xaml`, weight-tier probability anchors, refactor candidates |
-| `Documents\Design\RandomCreation_ProjectContext_v2.0.md`, `_v1.0.md` | Earlier version design records |
-| `Documents\Design\RandomCreation_DevelopmentLifecycle.md` | **How the project is worked and shipped.** Storage scheme, the build cycle, git/GitHub, licensing, the portable-vs-installed fork, sample content |
-| `Documents\Design\Screen Shots\` | UI screenshots by version (v1.0–v4.0); the v4.0 set feeds the README |
-| `Source\RandomCreation\RandomCreation\changelog.txt` | Released changes, user-facing wording — ships beside the exe as a program file (v4.0) |
+  Deferred section of the v3.0 project context record before "fixing" them.

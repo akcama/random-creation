@@ -5,7 +5,7 @@
 Describe the pieces of something — a creature, a starship, a gun, a character, a
 planet — and let the app assemble them into combinations you didn't plan.
 
-![Random Creation, main screen](Documents/Design/Screen%20Shots/v4.0/Main_Dark_Result_4_0.png)
+![Random Creation, main screen](docs/assets/screen-shots/v4.0/Main_Dark_Result_4_0.png)
 
 ---
 
@@ -51,11 +51,11 @@ parts.
 
 | Managing content | Collections |
 |---|---|
-| ![Manage content](Documents/Design/Screen%20Shots/v4.0/Manage_Dark_4_0.png) | ![Collections](Documents/Design/Screen%20Shots/v4.0/Collections_4_0.png) |
+| ![Manage content](docs/assets/screen-shots/v4.0/Manage_Dark_4_0.png) | ![Collections](docs/assets/screen-shots/v4.0/Collections_4_0.png) |
 
 | History | Light theme |
 |---|---|
-| ![History](Documents/Design/Screen%20Shots/v4.0/History_4_0.png) | ![Light theme](Documents/Design/Screen%20Shots/v4.0/Main_Light_Result_4_0.png) |
+| ![History](docs/assets/screen-shots/v4.0/History_4_0.png) | ![Light theme](docs/assets/screen-shots/v4.0/Main_Light_Result_4_0.png) |
 
 ---
 
