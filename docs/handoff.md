@@ -1,12 +1,10 @@
 # Random Creation — Handoff
 
-upgraded AI PM 4.0 → 5.13.0 on 2026-09-12; the rest is unchanged
-
-Written at the 2026-08-07 close-out (AUTO), a micro-session that corrected two characters in CLAUDE.md's AI PM block; reshaped to the three-section charter at the AI PM 5 upgrade of 2026-09-12. The previous session's note to the next one; everything here expires. Charter: the method's `charters.md`.
+Written at the 2026-09-12 close-out, the session that upgraded AI PM from 4.0 to 5.13.0. The previous session's note to the next one; everything here expires. Charter: the method's `charters.md`.
 
 ## Where we are
 
-App at v4.0, released 2026-08-02 with installer and portable downloads on the GitHub Releases page, and nothing about the app has changed since. The repository lives in the akcama organization; GitHub redirects the old henry-akcama address. No program is in flight: what remains are the four post-release chores, in the backlog's Planned order.
+App at v4.0, released 2026-08-02 with installer and portable downloads on the GitHub Releases page, and nothing about the app has changed since. This session moved no app work: it upgraded AI PM from 4.0 to 5.13.0, so the method now arrives by the session-start hook, the memory lives under docs/ with the index as its only map, and the close-out has three banners. The repository lives in the akcama organization; GitHub redirects the old henry-akcama address. No program is in flight: what remains are the four post-release chores, in the backlog's Planned order.
 
 ## Next session
 
