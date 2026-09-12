@@ -1,0 +1,52 @@
+# ============================================================================
+# Random Creation — product page (GitHub Pages)
+# ============================================================================
+# Publishes the static site under site/ to GitHub Pages whenever a change to
+# that folder lands on main. The site is plain HTML and CSS; nothing is built.
+#
+# ONE-TIME SETUP, done by hand in the repository's Settings -> Pages: set
+# "Source" to "GitHub Actions". Until that is done, this workflow's deploy
+# step fails and nothing is published. The site's address once live:
+#   https://akcama.github.io/random-creation/
+# ============================================================================
+
+name: Product page
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Package the site folder
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
