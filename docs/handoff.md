@@ -1,5 +1,7 @@
 # Random Creation — Handoff
 
+upgraded AI PM 4.0 → 5.13.0 on 2026-09-12; the rest is unchanged
+
 Written at the 2026-08-07 close-out (AUTO), a micro-session that corrected two characters in CLAUDE.md's AI PM block; reshaped to the three-section charter at the AI PM 5 upgrade of 2026-09-12. The previous session's note to the next one; everything here expires. Charter: the method's `charters.md`.
 
 ## Where we are
