@@ -61,12 +61,18 @@ parts.
 
 ## Getting it
 
-Download the latest version from the **[Releases](../../releases)** page.
+**The easy way:** the **[product page](https://akcama.github.io/random-creation/)** has a
+single Download button and plain-language instructions.
 
-- **Windows only**
-- **No installation.** Unzip it anywhere and run `RandomCreation.exe`
-- **Nothing to install first** — everything the app needs is bundled, including the
-  .NET runtime
+Or pick a file from the **[Releases](../../releases)** page. Every release comes in two forms:
+
+- **Installer** (`RandomCreation-<version>-setup.exe`) — no admin rights needed; your
+  content lives in your Windows user profile, safe across updates and uninstalls
+- **Portable** (`RandomCreation-<version>-portable.zip`) — no installation; unzip it
+  anywhere and run `RandomCreation.exe`; your content lives in a `data` folder beside the app
+
+Either way it is **Windows only** and there is **nothing to install first** — everything the
+app needs is bundled, including the .NET runtime.
 
 > **A note on the Windows warning.** The download isn't code-signed, so Windows may
 > show a blue *"Windows protected your PC"* screen. Click **More info**, then **Run
@@ -77,7 +83,9 @@ Download the latest version from the **[Releases](../../releases)** page.
 
 ## Your content
 
-Everything you create lives in a `data` folder next to the .exe:
+Everything you create lives in one folder — `data` beside the app for the portable
+version, `%LocalAppData%\RandomCreation` for the installed one. **Settings → Open data
+folder** opens it either way:
 
 | File | Holds |
 |------|-------|
@@ -89,15 +97,16 @@ Everything you create lives in a `data` folder next to the .exe:
 Copy that folder to another machine and your entire setup goes with it. Back it up
 by copying it somewhere safe.
 
-A sample `categories.json` ships in the `samples` folder to show what the format
-looks like. Copy it into `data` if you want a starting point — but note it will
-replace anything already there.
+A new install starts with sample content so there is something to generate straight
+away. The same sample ships in the `samples` folder beside the app to show what the
+format looks like; the app only ever copies it in when you have no content at all, so
+your own content is never overwritten.
 
 ---
 
 ## Status
 
-Version 3.0. A personal creative tool in active use, not a commercial product.
+Version 4.0. A personal creative tool in active use, not a commercial product.
 
 ---
 
