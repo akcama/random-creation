@@ -129,7 +129,8 @@ tree hash identical before and after, GitHub's tip hash matching local), then th
 then refs/original deleted and the old objects garbage-collected. The real address exists
 nowhere in the repository.
 
-STILL TO DO: GitHub Actions. Pages is deliberately deferred past v4.0 — see below.
+BOTH NOW EXIST: GitHub Actions since the v4.0 release (2026-08-02), GitHub Pages since
+2026-09-12 — see below.
 
 GITHUB RELEASES replaces the Releases\ folder's distribution role. Release attachments
 allow up to 2 GB per file, so the ~70 MB zips are fine; the 100 MB limit applies only to
@@ -138,9 +139,15 @@ files committed into the repository itself.
 RELEASES IS ALREADY A DOWNLOAD PAGE, and this is the correction worth stating plainly
 because it is easy to assume otherwise: publishing a release gives GitHub-hosted downloads
 and a permanent "latest release" address that never changes. No Pages site is required to
-distribute the app. PAGES IS POLISH — a branded landing page with screenshots — and is
-therefore scheduled AFTER v4.0 ships, when there is a real download to point at and
-corrected screenshots to use.
+distribute the app. PAGES IS POLISH — a branded landing page with screenshots — and was
+therefore built AFTER v4.0 shipped, once there was a real download to point at and
+corrected screenshots to use. It went live on 2026-09-12 at
+https://akcama.github.io/random-creation/, served from site\ on main by its own workflow
+(.github\workflows\pages.yml, Pages source "GitHub Actions"). The reason it exists: the
+Releases page is a developer's page — toolbar, commit counts, downloads folded under an
+Assets heading beside two source archives — and a non-technical visitor needs one button.
+A change under site\ that lands on main is live within a minute, so an edit there is
+publication, not backup.
 
 THE AUTOMATED RELEASE PIPELINE, the shape being built toward:
 
@@ -163,7 +170,11 @@ THREE CONSEQUENCES THAT CHANGE HOW THINGS ARE WRITTEN, starting now:
   truth and the two-steps-before-the-tag rule below reduces to one: finalise changelog.txt.
 
 THE README NEEDS NO PER-RELEASE EDIT: download links written once against the permanent
-latest-release address keep working forever.
+latest-release address keep working forever. Nor does the product page: its button asks
+the GitHub Releases API for the newest release at page load and links straight to the
+installer and the portable zip by their asset names, falling back to the latest-release
+address if the lookup fails. The one thing that would break it is renaming the assets
+away from the -setup.exe and -portable.zip endings.
 
 RETIRING THE LOCAL Releases\ ARCHIVE (781 MB, git-ignored, therefore unprotected). Once the
 pipeline exists, GitHub holds every release and the folder never needs to grow again. For

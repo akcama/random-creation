@@ -75,6 +75,11 @@ everything, publishes nothing. The old local publish profile
 (`RandomCreation\Properties\PublishProfiles\FolderProfile.pubxml`) still exists but points
 at a dead output path; the pipeline is the release mechanism.
 
+The **product page** for non-technical visitors lives under `site\` (plain HTML and CSS)
+and is served by GitHub Pages at https://akcama.github.io/random-creation/. **Any change
+under `site\` that lands on main is live within a minute** — an edit there is publication,
+not backup, so preview it first (`.claude\launch.json` serves it to the in-app browser).
+
 ## Architecture
 
 **Navigation.** `MainWindow` owns everything. Screens are `UserControl` panels stacked in

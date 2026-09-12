@@ -33,14 +33,13 @@ The post-release chores of v4.0, in intended order.
 
 ## Proposed
 
-- GitHub Pages, a branded product page. TRIGGER: when wanted. The precondition it waited on,
-  a real download to point at and correct screenshots, is met; optional polish.
 - Updater. TRIGGER: a ruling to build it; deferred from v4.0 by ruling. Three options in the
   lifecycle guide section 6; the no-dependency GitHub Releases API check remains the
   recommended fit.
-- Remaining v4.0 screenshots. TRIGGER: a product page or the v4.0 record doc wanting them.
-  Only the five README-facing shots were reshot; the deeper v3.0 set (settings, dialogs,
-  print preview, presets) still documents v3.0.
+- Remaining v4.0 screenshots. TRIGGER: the v4.0 record doc wanting them, or a product-page
+  section showing settings, printing or presets. The product page shipped on the five
+  README-facing shots; the deeper v3.0 set (settings, dialogs, print preview, presets)
+  still documents v3.0.
 - Refactor and feature candidates from the v3.0 era: the ManageContentScreen refactor,
   ObservableCollection, Redo, weight tier customisation, categories.json import,
   single-collection export, full group detail interactivity. Recorded in the engineering

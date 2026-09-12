@@ -20,9 +20,13 @@
 | `Source/RandomCreation/RandomCreation/changelog.txt` | the app's user-facing changelog, a program file beside the exe | updated in the same change as a user-visible feature or fix |
 | `Source/RandomCreation/Installer/RandomCreation.iss` | the Inno Setup installer script: per-user, no UAC, the uninstaller keeps content by default | |
 | `.github/workflows/release.yml` | the tag-driven release pipeline: portable zip and installer, attached to a GitHub Release | the Run workflow button is a dry run |
+| `site/` | the product page: one HTML file, one stylesheet, its screenshots and icons copied under `assets/` | any change here that lands on main is published live within a minute |
+| `.github/workflows/pages.yml` | the product-page deploy: publishes `site/` to GitHub Pages on any change to it on main | |
+| `.claude/launch.json` | the browser launch config: serves `site/` on port 8765 for a local preview | tooling, not governance |
 | `Releases/` | the local release archive, about 780 MB: the v1.0 source and build, the v2.0 and v3.0 zips; git-ignored | no safety net: any deletion needs an explicit ruling |
 | `bin/`, `obj/`, `.vs/` | build output and IDE scratch, git-ignored | the dev build under bin carries the portable marker |
-| `https://github.com/akcama/random-creation` | the repository (remote `origin`), public, all rights reserved; its Releases page holds the v4.0 installer and portable zip | a push is backup, not publication; the old henry-akcama address redirects |
+| `https://github.com/akcama/random-creation` | the repository (remote `origin`), public, all rights reserved; its Releases page holds the v4.0 installer and portable zip; its About box links to the product page | a push is backup, not publication; the old henry-akcama address redirects |
+| `https://akcama.github.io/random-creation/` | the product page, the link to give people: one Download button reading the newest release from GitHub at page load | served by GitHub Pages from `site/` |
 | `CLAUDE.local.md` | facts about this machine, never committed | its shape is `CLAUDE.local.template.md` |
 
 ## The documents
