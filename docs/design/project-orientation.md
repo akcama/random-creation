@@ -8,7 +8,7 @@ What is true about the project now, for a session about to design or build anyth
 | §2 Design philosophy | the stance the work takes |
 | §3 Future plans | what is planned beyond the work in flight, with the record that rules each |
 | §4 Team and the AI's role | who works on it and how |
-| §5 Technical environment | the environment in a sentence; the register holds the facts |
+| §5 Environment and sources | the environment in a sentence: what the project runs on, or, for a knowledge project, where the material comes from and how it is kept safe; the register holds the facts |
 | §6 Scale | the numbers that shape design |
 | §7 Standing rulings | decisions about the project's ground, with dates |
 
@@ -22,7 +22,7 @@ Random Creation is a Windows desktop app that generates random combinations from
 
 ## §4 Team and the AI's role
 
-## §5 Technical environment
+## §5 Environment and sources
 
 A C# / WPF app on .NET 8 (Windows) with no NuGet packages, built from one Visual Studio solution with the command-line .NET SDK, kept in git on a public all-rights-reserved GitHub repository, and released by GitHub Actions from a pushed tag as a portable zip and an Inno Setup installer, with a GitHub Pages product page as its front door. The facts are in the environment register, `docs/environment.md`; nothing from it is restated here.
 
