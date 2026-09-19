@@ -8,7 +8,8 @@
 | --- | --- | --- |
 | `docs/` | the project's memory: the cadence files at its top, the record documents by kind below | memory is edited at close-out |
 | `docs/ai-pm/` | AI PM's own: the config, the applied version, the tool registrations, the usage log | registrations belong to their tools |
-| `docs/design/` | design records: the project context per app version, the v4.0 release plan | |
+| `docs/backlog/` | the work ahead, one file per item; its listing is `backlog list` | the header is the backlog module's, never edited by hand |
+| `docs/design/` | design records: the project orientation, the project context per app version, the v4.0 release plan | |
 | `docs/reference/` | code-level reference: the engineering notes, the v3.0 file index | |
 | `docs/guides/` | how the project is worked and shipped: the development lifecycle | |
 | `docs/assets/icons/` | the app icon: the master and every exported size | design masters; the shipped icon is in the source tree |
@@ -34,13 +35,13 @@
 | Path | Authoritative for | State |
 | --- | --- | --- |
 | `docs/handoff.md` | where the work stands and the next move | LIVE |
-| `docs/backlog.md` | the work ahead | LIVE |
 | `docs/changelog.md` | what happened, when, and where the detail lives | LIVE |
 | `docs/environment.md` | the facts about the systems the project runs on | LIVE |
 | `docs/guides/development-lifecycle.md` | HOW THE PROJECT IS WORKED AND SHIPPED: storage scheme, build cycle, git and GitHub, licensing, packaging, sample content, the program-files versus user-data split. Distinct from every other record, which describe the app | LIVE |
-| `docs/design/2026-08-01-release-plan-v4.0.md` | WHAT v4.0 CONTAINS, IN WHAT ORDER, AND WHY | LIVE; retires once absorbed into a v4.0 record doc (backlog, Planned) |
+| `docs/design/2026-08-01-release-plan-v4.0.md` | WHAT v4.0 CONTAINS, IN WHAT ORDER, AND WHY | LIVE; retires once absorbed into a v4.0 record doc (backlog item: Write the v4.0 design record) |
 | `docs/design/2026-06-06-project-context-v3.0.md` | v3.0 design: architecture, every screen's layout, undo, toast, clipboard and drag specs, colour palettes, bug-fix table, deferred list. Still the deep architecture record until a v4.0 record absorbs it | FROZEN |
 | `docs/reference/engineering-notes.md` | CODE-LEVEL ENGINEERING KNOWLEDGE: WPF traps, resource-precedence rules, weight-tier probability anchors, code-quality warnings, refactor candidates | LIVE |
+| `docs/design/project-orientation.md` | what the project is and for whom, the stance the work takes, its environment in a sentence, its scale; read before designing anything | LIVE |
 | `docs/reference/file-index-v3.0.md` | what each source file does and what changed in v3.0 | STABLE; a version behind |
 | `docs/design/project-context-v2.0.md` | the v2.0 design record | FROZEN |
 | `docs/design/project-context-v1.0.md` | the v1.0 design record; its date is not established | FROZEN |

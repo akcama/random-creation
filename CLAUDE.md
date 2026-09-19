@@ -1,7 +1,6 @@
-Random Creation — WPF desktop app (C# / .NET 8)
+# Random Creation — WPF desktop app (C# / .NET 8)
 
-**App:** Random Creation (Windows desktop) · **Current version:** 4.0, released August 2026
-**Original working title:** Creature Crafter (v1.0), renamed in v2.0.
+**App:** Random Creation (Windows desktop) · **Current version:** 4.0, released August 2026 · **Original working title:** Creature Crafter (v1.0), renamed in v2.0.
 
 Random Creation generates random combinations from user-defined content. The user
 creates **Collections** (Creatures, Starships, Guns), adds **Category Groups** to each
@@ -21,8 +20,9 @@ every session start; if this session opened without an AI PM opener,
 type /ai-pm-setup. The project's memory is docs/; its map is docs/index.md.
 --- end AI PM block ---
 
-Where everything lives, what each record document is authoritative for, and its state:
-`docs/index.md`. The facts about the toolchain, GitHub and the pipeline: `docs/environment.md`.
+Read `docs/design/project-orientation.md` before any work: what the project is and for whom,
+its stance, its environment. Where everything lives, what each record document is authoritative
+for, and its state: `docs/index.md`. Toolchain, GitHub and pipeline facts: `docs/environment.md`.
 
 ## ⚠️ Where the live code is
 

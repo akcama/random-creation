@@ -1,5 +1,7 @@
 # Random Creation — Handoff
 
+Upgraded AI PM 5.14.1 → 6.1.0 on 2026-09-18; the rest is unchanged, except that NEXT SESSION now holds the next move alone, its queue living in the backlog folder in its order.
+
 Written at the second 2026-09-12 close-out, the session that built and published the product page. The previous session's note to the next one; everything here expires. Charter: the method's `charters.md`.
 
 ## Where we are
@@ -8,10 +10,7 @@ App at v4.0, released 2026-08-02, unchanged since. The product page is live at h
 
 ## Next session
 
-1. Download-back verification of the published v4.0 assets, the precondition for retiring the local Releases folder. A friend of the developer may be downloading from the product page in the meantime; their experience is a data point, not a substitute.
-2. The one live user's manual upgrade, which must carry her data; the condition is recorded in the environment register.
-3. The v4.0 record doc, absorbing the release plan, which then retires.
-4. Releases folder retirement, on an explicit ruling: git-ignored, no safety net.
+Download-back verification of the v4.0 release, the first of the four current items: it is the precondition for retiring the local Releases folder, and it needs a download onto a machine or profile that does not already hold the dry-run build.
 
 ## Until further notice
 

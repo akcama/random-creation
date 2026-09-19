@@ -28,5 +28,5 @@ The facts about the systems this project runs on, one fact per row. Machine fact
 
 | Condition | Since | Ends when | Treat as | Bring up |
 | --- | --- | --- | --- | --- |
-| The one live user runs app v3.0 portable, her data in the old data folder beside the exe | 2026-08-02 | her manual upgrade carries her data to v4.0 (backlog, Planned) | never change the data layout or the upgrade steps without checking her case | |
-| The release pipeline's helper actions run on Node.js 20, deprecated on GitHub runners | 2026-08-02 | the @vN bumps land (backlog, Ongoing) | a cosmetic warning in the run log | |
+| The one live user runs app v3.0 portable, her data in the old data folder beside the exe | 2026-08-02 | her manual upgrade carries her data to v4.0 (backlog item: The live user's upgrade to v4.0) | never change the data layout or the upgrade steps without checking her case | |
+| The release pipeline's helper actions run on Node.js 20, deprecated on GitHub runners | 2026-08-02 | the @vN bumps land (backlog item: Workflow helper actions on a newer Node.js) | a cosmetic warning in the run log | |
