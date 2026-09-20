@@ -1,5 +1,7 @@
 # Random Creation — Handoff
 
+Upgraded AI PM 7.0.1 → 8.1.0 on 2026-09-20; the rest is unchanged.
+
 Upgraded AI PM 6.1.0 → 7.0.1 on 2026-09-18; the rest is unchanged.
 
 Upgraded AI PM 5.14.1 → 6.1.0 on 2026-09-18; the rest is unchanged, except that NEXT SESSION now holds the next move alone, its queue living in the backlog folder in its order.
